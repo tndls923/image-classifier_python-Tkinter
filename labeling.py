@@ -11,6 +11,17 @@ import math
 
 
 
+n=10  ## 사진갯수
+
+
+
+
+
+
+
+
+
+
 ## create Directory
 def createDirectory(directory):
     current_path = os.getcwd()
@@ -20,9 +31,6 @@ def createDirectory(directory):
     except OSError:
         print("Error: Failed to create the directory.")
 
-
-
-n=10  ## 사진갯수
 
 
 
@@ -105,6 +113,7 @@ def movefile(i, new):
     shutil.move(source,destination)
 
 
+
 num=0
 
 def skip_image():
@@ -181,7 +190,7 @@ w2.add(btn_n, padx=20)
 
 
 img_path = []
-for i in range(1, 51):
+for i in range(1, n+1):
     try:
         img_path.append(ImageTk.PhotoImage(file="./image/"+ str(i) + ".jpg"))
     except:
